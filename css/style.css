@@ -1,0 +1,63 @@
+body {
+    font-family: "Times New Roman";
+    text-transform: uppercase;
+}
+
+.menu {
+    width: 704px;
+    position: relative;
+    top: 337px;
+    right: 340px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(128, 128, 128);
+    transform: rotate(90deg);
+}
+
+.menu:hover .submenu {
+    transform: translateY(-65%) rotate(-90deg);
+}
+
+.submenu {
+    overflow: hidden;
+    position: absolute;
+    background-color: rgb(128, 128, 128);
+    color: white;
+    width: 300px;
+    height: 704px;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    padding-left: 50px;
+    list-style: none;  
+    transform: translateY(-20%) rotate(-90deg);
+    transition: transform 0.5s ease;
+}
+
+.submenu-item {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    margin-bottom: 15px;
+    gap: 2px;
+}
+
+.submenu-item::before {
+    content: "🔶";
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+}
+
+.submenu-link {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.submenu-link:hover {
+    color: orange;
+    transition: 0.2s;
+}
